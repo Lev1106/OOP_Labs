@@ -20,7 +20,7 @@ public class Analyzer {
                     data.addValue(value);
                 }
                 catch (Exception e) {
-                    System.out.println(e);
+                    System.out.printf("You entered incorrect value! Error: %s\n", e);
                 }
             }
         }

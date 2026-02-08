@@ -7,7 +7,7 @@ public class Data {
 
     public Data() {
         this.average = 0;
-        this.maximum = 0;
+        this.maximum = -2e9;
         this.size = 0;
     }
 

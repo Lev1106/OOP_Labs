@@ -1,49 +1,20 @@
 package lab1.problem4;
 
+import practice2.Student;
+
 public class GradeBookTest {
-    private double temperature;
-    private char scale;
-
-    public Temperature(double temperature) {
-        this.temperature = temperature;
-        this.scale = 'C';
-    }
-
-    public Temperature(char scale) {
-        this.temperature = 0;
-        this.scale = scale;
-    }
-
-    public Temperature(double temperature, char scale) {
-        this.temperature = temperature;
-        this.scale = scale;
-    }
-
-    public Temperature() {
-        this.temperature = 0;
-        this.scale = 'C';
-    }
-    public double temperatureInCelsius() {
-        if (scale == 'C') return temperature;
-        return 5 * (temperature - 32) / 9;
-    }
-    public double temperatureInFahrenheit() {
-        if (scale == 'F') return temperature;
-        return 9 * (temperature / 5) + 32;
-    }
-
-    public void setTemperature(double temperature) {
-        this.temperature = temperature;
-    }
-    public void setScale(char scale) {
-        if (scale != 'C' && scale != 'F') return;
-        this.scale = scale;
-    }
-    public void setValues(double temperature, char scale) {
-        this.temperature = temperature;
-        this.scale = scale;
-    }
-    public char getScale(char scale) {
-        return scale;
+    public static void main(String[] args) {
+        Course course = new Course("CS101 Object-oriented Programming and Design",
+                "This course teaches how to design software, covers concepts like classes, interfaces, inherticance, encapsulation etc",
+                5,
+                new String[]{"Discrete structures", "Databases"});
+        Student[] students = {
+                new Student("Lev", 31004),
+                new Student("John", 65432),
+                new Student("Test", 12345)
+        };
+        GradeBook gradeBook = new GradeBook(course, students);
+        gradeBook.displayMessage();
+        gradeBook.displayGradeReport();
     }
 }

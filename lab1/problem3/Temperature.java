@@ -43,7 +43,7 @@ public class Temperature {
         this.temperature = temperature;
         this.scale = scale;
     }
-    public char getScale(char scale) {
-        return scale;
+    public char getScale() {
+        return this.scale;
     }
 }
