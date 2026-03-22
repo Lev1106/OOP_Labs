@@ -1,0 +1,3 @@
+1. Class is describing what is object and how should it behave. Interface is describing what it can do without logic implementation
+2. Yes. public static final
+3. Yes, it can. Because it makes easier to implement functions from different sources. Like from real examples, Student, can be sleepable, movable, studiable etc., these all properties are nicely implementable with interfaces
